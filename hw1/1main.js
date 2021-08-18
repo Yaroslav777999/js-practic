@@ -1,8 +1,8 @@
 // //задача 1
 
-let celsia = prompt('Введите температуру в градусах по Цельсию');
+let celsia = +prompt('Введите температуру в градусах по Цельсию');
 let f = (9/5)*celsia+32;
-alert(f);
+alert(`Температура в градусах по Фаренгейту равна ${Math.round(f)} градусов`);
 
 // //задача 2
 
@@ -28,3 +28,18 @@ async используется для того, чтобы указать бра
 Атрибут доступен только для файлов, подключающихся внешне.
 
 defer указывает браузеру, что скрипт должен быть выполнен после того, как HTML-документ будет полностью разобран.
+
+//задача 5
+let numberTicket = +prompt('Введите номер билета'),
+sixDigit = numberTicket%10,
+fiveDigit = Math.floor(numberTicket/10%10),
+fourDigit = Math.floor(numberTicket/100%10),
+threeDigit = Math.floor(numberTicket/1000%10),
+twoDigit = Math.floor(numberTicket/10000%10),
+oneDigit = Math.floor(numberTicket/100000%10),
+message = 'Этот билет НЕсчастливый';
+
+if (oneDigit + twoDigit + threeDigit === sixDigit + fiveDigit + fourDigit) {
+    alert(message = "Этот билет счастливый!");
+}
+    alert(message);
